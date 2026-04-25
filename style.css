@@ -1,168 +1,211 @@
 * {
-    padding: 0;
-    margin: 0;
+   padding: 0;
+   margin: 0;
 }
 
 body {
 
 
-    font-family: "Gabarito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+   font-family: "Gabarito", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
 }
 
 .Navbar {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid black 1px;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: solid black 1px;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   background-color: white;
+   z-index: 1;
 
 }
-.Navbar-s1__title{
-    color: #8E32E7;
+
+.Navbar-s1__title {
+   color: #8E32E7;
 }
-.Navbar-s2{
-    padding: 10px;
-    border: solid black 1px;
-    border-radius:30px;
-    align-items: center;
-    width: 900px;
-    
-    
-}
-.Navbar-s2 input{
-    border-style: none;
-    background-color: transparent;
+
+.Navbar-s2 {
+   padding: 10px;
+   border: solid black 1px;
+   border-radius: 30px;
+   align-items: center;
+   width: 900px;
+
 
 }
-.Navbar-s2 input:focus{
-    outline: none;
+
+.Navbar-s2 input {
+   border-style: none;
+   background-color: transparent;
+
 }
-.Navbar-s3{
-    display: flex;
-    gap: 10px;
-    font-size: 20px;
-    align-items: center;
+
+.Navbar-s2 input:focus {
+   outline: none;
 }
+
+.Navbar-s3 {
+   display: flex;
+   gap: 10px;
+   font-size: 20px;
+   align-items: center;
+}
+
 /*my learning popup*/
-.mylearnings{
+.mylearnings {
    position: relative;
    cursor: pointer;
 }
-.mylearnings__popup{
+
+.mylearnings__popup {
    position: absolute;
-   font-size:15px;
+   font-size: 15px;
    border: 2px solid black;
    background-color: white;
    width: 100px;
    padding: 10px;
-   top:150% ;
+   top: 150%;
    right: 0;
    display: none
 }
-.mylearnings:hover .mylearnings__popup{
+
+.mylearnings:hover .mylearnings__popup {
    display: block;
 }
 
-.Categories{
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    border-bottom: solid black 1px;
- }
- .Categories p{
-    background-color: #8E32E7;
-    color: white;
-    padding: 10px;
-    border-radius: 30px;
- }
- .sale-img img{
-    width :1520px ;
-    height: 350px;
-    position: relative;
- }
- .sale-img__offer{
-   
-   border: 2 px solid black;
+.Categories {
    padding: 10px;
-background-color: white;
-width:fit-content ;
-position: absolute;
-top: 24%;
-left: 36%;
+   display: flex;
+   justify-content: space-around;
+   border-bottom: solid black 1px;
+}
 
- }
- .sale-img__offer h1{
+.Categories p {
+   background-color: #8E32E7;
+   color: white;
+   padding: 10px;
+   border-radius: 30px;
+   border: solid #8E32E7 1px;
+}
+.Categories p:hover{
+   transition:1s ;
+   background-color: transparent;
    color: #8E32E7;
- }
- .recommended{
-    padding: 10px;
- }
- .card-container{
-    width: 300px;
- }
- .card-container img{
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 20px;
-    border: solid black 1px;
- }
- .recommended-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
- }
- .topics{
-    padding: 10px;
- }
- .topics-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top :10px; 
- }
- .topics-container p{
-    
-    border:solid gray 2px;
-    padding: 10px;
-    flex-grow: 1;
-    flex-basis: 25%;
-    border-radius: 20px;
-    
- }
- .popular{
-    padding: 10px;
- }
- .popular-container{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 10px;
- }
- .footer{
-    background-color: black;
-    color: white;
-    padding: 30px;
- }
- .footer-one{
-    display: flex;
-    gap: 10px;
- }
- .footer-one p{
-    margin: 10px;
- }
- .footer-two{
-    display: flex;
-    margin: 10px;
-    justify-content: space-between;
-    
- }
- 
+   border: solid #8E32E7 1px;
+   cursor: pointer;
+}
+
+
+.sale-img img {
+   width: 1520px;
+   height: 350px;
+   position: relative;
+}
+
+.sale-img__offer {
+
+   border:  solid black 2px;
+   padding: 10px;
+   background-color: white;
+   width: fit-content;
+   position: absolute;
+   top: 24%;
+   left: 36%;
+   animation-name:zoom ;
+   animation-duration: 2s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+
+}
+@keyframes zoom {
+   0%{ opacity: 0;
+   transform: scale(0);}
+   100%{ transform: scale(1);
+   opacity: 1;}
+}
+
+.sale-img__offer h1 {
+   color: #8E32E7;
+}
+
+.recommended {
+   padding: 10px;
+}
+
+.card-container {
+   width: 300px;
+}
+
+.card-container img {
+   width: 100%;
+   margin-top: 10px;
+   border-radius: 20px;
+   border: solid black 1px;
+}
+
+.recommended-container {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+}
+
+.topics {
+   padding: 10px;
+}
+
+.topics-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin-top: 10px;
+}
+
+.topics-container p {
+
+   border: solid gray 2px;
+   padding: 10px;
+   flex-grow: 1;
+   flex-basis: 25%;
+   border-radius: 20px;
+
+}
+
+.popular {
+   padding: 10px;
+}
+
+.popular-container {
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+
+.footer {
+   background-color: black;
+   color: white;
+   padding: 30px;
+}
+
+.footer-one {
+   display: flex;
+   gap: 10px;
+}
+
+.footer-one p {
+   margin: 10px;
+}
+
+.footer-two {
+   display: flex;
+   margin: 10px;
+   justify-content: space-between;
+
+}
